@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,14 +25,24 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //Spinner to fill the ligne ------------------------------------------------------------------
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+        String[] years = {"1","2","3"};
+        ArrayAdapter<CharSequence> langAdapter = new ArrayAdapter<CharSequence>(this ,R.layout.spinner_text, years );
+        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
+        spinner.setAdapter(langAdapter);
+
+        //------------------------------------------------------------------------------
+
+        //spinner to choose which car----------------------------------
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+        String[] Cars = {"24343-35-H","37643-47-B","736495-55-T"};
+        ArrayAdapter<CharSequence> langAdapter2 = new ArrayAdapter<CharSequence>(this ,R.layout.spinner_text, Cars );
+        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
+        spinner2.setAdapter(langAdapter2);
+
+        //-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
