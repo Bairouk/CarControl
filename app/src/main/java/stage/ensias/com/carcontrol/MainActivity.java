@@ -1,5 +1,7 @@
 package stage.ensias.com.carcontrol;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity
@@ -25,24 +28,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Spinner to fill the ligne ------------------------------------------------------------------
-
-        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
-        String[] years = {"1","2","3"};
-        ArrayAdapter<CharSequence> langAdapter = new ArrayAdapter<CharSequence>(this ,R.layout.spinner_text, years );
-        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
-        spinner.setAdapter(langAdapter);
-
-        //------------------------------------------------------------------------------
-
-        //spinner to choose which car----------------------------------
-        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
-        String[] Cars = {"24343-35-H","37643-47-B","736495-55-T"};
-        ArrayAdapter<CharSequence> langAdapter2 = new ArrayAdapter<CharSequence>(this ,R.layout.spinner_text, Cars );
-        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
-        spinner2.setAdapter(langAdapter2);
-
-        //-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -52,6 +37,27 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        // Spinner to fill the ligne ------------------------------------------------------------------
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+        String[] years = {"1","2","3"};
+        ArrayAdapter<CharSequence> langAdapter = new ArrayAdapter<CharSequence>(this ,R.layout.spinner_text, years );
+        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
+        spinner.setAdapter(langAdapter);
+
+        //--------------------------------------------------------------------------------------------
+
+        // spinner to choose which car -------------------------------------------------------------------
+
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+        String[] Cars = {"24343-35-H","37643-47-B","736495-55-T"};
+        ArrayAdapter<CharSequence> langAdapter2 = new ArrayAdapter<CharSequence>(this ,R.layout.spinner_text, Cars );
+        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
+        spinner2.setAdapter(langAdapter2);
+
+        //-----------------------------------------------------------------------------------
     }
 
     @Override
@@ -109,5 +115,17 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    //OnClick for the start button--------------------
+
+    public void start_act(View view) {
+
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        View mView = getLayoutInflater().inflate(R.layout.info_dialog, null);
+        mBuilder.setView(mView);
+        final AlertDialog dialog = mBuilder.create();
+        dialog.show();
+
     }
 }

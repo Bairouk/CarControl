@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "748379352895",
+    "firebase_url": "https://salama-4fc93.firebaseio.com",
+    "project_id": "salama-4fc93",
+    "storage_bucket": "salama-4fc93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748379352895:android:66112de4987d7df8",
+        "android_client_info": {
+          "package_name": "stage.ensias.com.carcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748379352895-arc24h813g7u6uglcm1orkglpdbv3o9f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "stage.ensias.com.carcontrol",
+            "certificate_hash": "a88fd28f71d224dadcda8173f46ab0b811e37653"
+          }
+        },
+        {
+          "client_id": "748379352895-vct9gfqsuu30lkjep5bj2u17ermjbd8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8ihhwSwEFxEwTNCfWy0_HLrBF1e_gY40"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748379352895-vct9gfqsuu30lkjep5bj2u17ermjbd8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
