@@ -1,11 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f3f2f1"
     tools:context=".MenuActivity"
-    tools:showIn="@layout/activity_menu">
+    tools:showIn="@layout/activity_menu"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <LinearLayout
+
+            android:layout_width="321dp"
+            android:layout_height="104dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/clickmee"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:gravity="center"
+                android:text="Ligne :      "
+                android:textSize="18dp"
+                android:textColor="@android:color/black"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="307dp"
+                android:layout_height="49dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/spin_background"
+
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/marque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+
+                    />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/drop" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="321dp"
+            android:layout_height="104dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:gravity="center"
+                android:text="Vehicule :      "
+                android:textSize="18dp"
+                android:textColor="@android:color/black"
+
+                />
+
+
+            <RelativeLayout
+                android:layout_width="307dp"
+                android:layout_height="49dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/spin_background"
+
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/genre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/drop" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
